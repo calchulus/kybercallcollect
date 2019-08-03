@@ -94,19 +94,33 @@ request2.send();
 
 requestFunction();
   
+var publicaddress;
+function getTorusAddress() {
+    const email = document.getElementById("email").value;
+    console.log(email);
+    console.log("HI");
+   torus.getPublicKey(email).then( function(result) {
+    console.log(result);
+       publicaddress = result;
+                                                });
+
+}
+
   
  function getDAIValue() {
 const sendamount = document.getElementById('daiamount').value;
         console.log(sendamount)
    deductedamt =   sendamount - amounttosellforeth;
         console.log(deductedamt);
-     console.log();
+     console.log("PUBLIC ADDRESS " + publicaddress);
      document.getElementById('sendval').innerHTML = "Amount to Receive: " + deductedamt + "<br>" + "Amount in ETH to pay: " + ethcost + "<br>";
      
+    
      widget = document.getElementById("widget");
-     widget.setAttribute("href", "https://widget.kyber.network/v0.7.0/?type=pay&mode=popup&receiveAddr=0x63B42a7662538A1dA732488c252433313396eade&receiveToken=ETH&receiveAmount=" + ethcost + "&callback=https%3A%2F%2Fkyberpay-sample.knstats.com%2Fcallback&paramForwarding=true&network=mainnet&lang=en&theme=theme-emerald");
+     widget.setAttribute("href", "https://widget.kyber.network/v0.7.0/?type=pay&mode=popup&receiveAddr="  + publicaddress + "&receiveToken=ETH&receiveAmount=" + ethcost + "&callback=https%3A%2F%2Fkyberpay-sample.knstats.com%2Fcallback&paramForwarding=true&network=mainnet&lang=en&theme=theme-emerald");
      
 // console.log(amounttosellforeth);
 //      const newval = document.createElement('div');
 //        newval.textContent = deductedamt;
     };
+

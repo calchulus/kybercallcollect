@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 
-<script>
-   
-    </script>
+<script src="https://app.tor.us/v0.0.20/embed.min.js"
+        integrity="sha384-tDTJ86ig+B5z7vXffrWKaBLC8dOCtiSV4a6OjWboyxfvcFNyL9Udxcld4kj1Wxny"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,6 +23,11 @@
 <!-- Add this to the <head> tag -->
 <link rel='stylesheet' href='https://widget.kyber.network/v0.7.0/widget.css'> 
 
+    
+    
+<input id="email" placeholder="bob@google.com" type="email">
+<button id="tor" onclick="getTorusAddress()" >Get Address</button>
+    
 
     <input id="daiamount" placeholder="# DAI" type="number">
     <button id="send" text="Send" onclick="getDAIValue()">Send </button>
@@ -33,12 +38,20 @@
 <!-- This is the 'Pay with tokens' button, place it anywhere on your webpage -->
 <!-- You can add multiple buttons into a same page -->
 
-<a id="widget"
+
+
+<a id="widget" style="margin-left: 20vw;"
 class='kyber-widget-button theme-emerald theme-supported' name='KyberWidget - Powered by KyberNetwork' title='Pay with tokens'
 target='_blank'>Pay KyberCallCollect</a>
 
 <!-- Add this to the end of <body> tag -->
 <script async src='https://widget.kyber.network/v0.7.0/widget.js'></script>
+
+
+<script>
+
+    </script>
+
 
   <script src="scripts.js"></script>
 </body>
