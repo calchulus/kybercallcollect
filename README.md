@@ -7,7 +7,8 @@ In this dApp, we allow a user to create a new wallet using Torus by providing si
 
 From there, we have an auto-populated Kyber Widget that allows the “collector” to send the requisite ETH for the user to then send their owed funds.
 
-![Kyber](https://calchulus.github.io/kybercallcollect/screenshots/kyber.png)
+<img src="https://calchulus.github.io/kybercallcollect/screenshots/kyber.png" alt="drawing" width="200" height="auto"/>
+
 
 Some future additions could be made - Instead of requiring a counterparty, it may be possible to draw these tokens directly from a Kyber Reserve, such that users just swap and trade. 
 
