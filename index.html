@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ghibli App</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+<script>
+    function getDAIValue() {
+const sendamount = document.getElementById('daiamount');
+   deductedamt =  amounttosellforeth - sendamount;
+        console.log(deductedamt);
+        console.log(amounttosellforeth;)
+      const newval = document.createElement('div');
+        newval.textContent = deductedamt;
+    }
+    </script>
+
+
+</head>
+
+<body>
+
+  <div id="root"></div>
+
+
+<!-- Add this to the <head> tag -->
+<link rel='stylesheet' href='https://widget.kyber.network/v0.7.0/widget.css'> 
+
+
+    <input id="daiamount" placeholder="# DAI" type="number">
+    <button id="send" text="Send" onclick="getDAIValue()">Send </button>
+
+
+<!-- This is the 'Swap tokens' button, place it anywhere on your webpage -->
+<!-- You can add multiple buttons into a same page -->
+<a href='https://widget.kyber.network/v0.7.0/?type=swap&mode=popup&callback=https%3A%2F%2Fkyberpay-sample.knstats.com%2Fcallback&paramForwarding=true&network=mainnet&receiveToken=ETH&receiveAmount=0.001&lang=en&defaultPair=ETH_DAI&commissionId=0x63a0cc7609F8777bB54d22169C25344bdDD7a105&theme=theme-emerald'
+class='kyber-widget-button theme-emerald theme-supported' name='KyberWidget - Powered by KyberNetwork' title='Pay with tokens'
+target='_blank'>Swap tokens</a>
+
+<!-- Add this to the end of <body> tag -->
+<script async src='https://widget.kyber.network/v0.7.0/widget.js'></script>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
