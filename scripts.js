@@ -106,6 +106,7 @@ function getTorusAddress() {
 
 }
 
+var maxethcost;
   
  function getDAIValue() {
 const sendamount = document.getElementById('daiamount').value;
@@ -114,13 +115,15 @@ const sendamount = document.getElementById('daiamount').value;
         console.log(deductedamt);
      console.log("PUBLIC ADDRESS " + publicaddress);
      document.getElementById('sendval').innerHTML = "Amount to Receive: " + deductedamt + "<br>" + "Amount in ETH to pay: " + ethcost + "<br>";
-     
     
+     maxethcost = Math.max(ethcost, 0.001);
+    console.log("WELCOME" + maxethcost);
      widget = document.getElementById("widget");
-     widget.setAttribute("href", "https://widget.kyber.network/v0.7.0/?type=pay&mode=popup&receiveAddr="  + publicaddress + "&receiveToken=ETH&receiveAmount=" + ethcost + "&callback=https%3A%2F%2Fkyberpay-sample.knstats.com%2Fcallback&paramForwarding=true&network=mainnet&lang=en&theme=theme-emerald");
+     widget.setAttribute("href", "https://widget.kyber.network/v0.7.0/?type=pay&mode=popup&receiveAddr="  + publicaddress + "&receiveToken=ETH&receiveAmount=" + maxethcost + "&callback=https%3A%2F%2Fkyberpay-sample.knstats.com%2Fcallback&paramForwarding=true&network=mainnet&lang=en&theme=theme-emerald");
      
 // console.log(amounttosellforeth);
 //      const newval = document.createElement('div');
 //        newval.textContent = deductedamt;
     };
 
+  
