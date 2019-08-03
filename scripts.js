@@ -44,6 +44,7 @@ request2.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response);
   if (request2.status >= 200 && request2.status < 400) {
+      setTimeout(2000);
       const card = document.createElement('div');
       card.setAttribute('class', 'card');
       const h1 = document.createElement('h1');
@@ -63,6 +64,7 @@ request2.onload = function () {
       const DAIgas = 52298;
       ethcost = mediumgas * DAIgas/ 10**8;
       h3.textContent = ethcost;
+      console.log(ethcost);
       const textheader = document.createElement("h3");
       textheader.textContent = "Txn cost in ETH";
       card.appendChild(textheader);
@@ -71,9 +73,11 @@ request2.onload = function () {
       textheadertwo.textContent = "Txn cost in DAI";
       card.appendChild(textheadertwo);
       const h4 = document.createElement('h1');
-    
 amounttosellforeth = ethcost/price_in_eth;
-      console.log(amounttosellforeth);
+ console.log(ethcost);
+
+      
+ console.log(amounttosellforeth);
       h4.textContent = amounttosellforeth;
       card.appendChild(h4);
       
@@ -85,9 +89,23 @@ amounttosellforeth = ethcost/price_in_eth;
 console.log(price_in_eth);
 
 request.send();
-
 request2.send();
+;
 
-
-
-
+  
+  
+ function getDAIValue() {
+const sendamount = document.getElementById('daiamount').value;
+        console.log(sendamount)
+   deductedamt =   sendamount - amounttosellforeth;
+        console.log(deductedamt);
+     console.log();
+     document.getElementById('sendval').innerHTML = "Amount to Receive: " + deductedamt + "<br>" + "Amount in ETH to pay: " + ethcost + "<br>";
+     
+     widget = document.getElementById("widget");
+     widget.setAttribute("href", "https://widget.kyber.network/v0.7.0/?type=pay&mode=popup&receiveAddr=0x63B42a7662538A1dA732488c252433313396eade&receiveToken=ETH&receiveAmount=" + ethcost + "&callback=https%3A%2F%2Fkyberpay-sample.knstats.com%2Fcallback&paramForwarding=true&network=mainnet&lang=en&theme=theme-emerald");
+     
+// console.log(amounttosellforeth);
+//      const newval = document.createElement('div');
+//        newval.textContent = deductedamt;
+    };
