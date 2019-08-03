@@ -85,13 +85,14 @@ amounttosellforeth = ethcost/price_in_eth;
 };
 
 
-
-console.log(price_in_eth);
-
-request.send();
+async function requestFunction() {
+    
+ await request.send();
 request2.send();
-;
 
+}
+
+requestFunction();
   
   
  function getDAIValue() {

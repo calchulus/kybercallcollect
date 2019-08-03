@@ -100,9 +100,10 @@ input {
 }
 
 #sendval {
-      margin: 1rem;
-  background: linear-gradient(90deg, #03a9f4, #0090ff);
+      margin: 3vh;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     color: white;
+    font-weight: bold;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
   border-radius: 12px;
   overflow: hidden;
