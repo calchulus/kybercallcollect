@@ -1,7 +1,7 @@
 
 # KyberCallCollect
 
-[Demo[(https://calchulus.github.io/kybercallcollect/)
+[Demo](https://calchulus.github.io/kybercallcollect/)
 
 The goal of the KyberCallCollect is to allow individuals who have no ETH to send any transactions, but may have an ERC-20 that is airdropped to them, can transact out using a “Call Collect” logic, so that the recipient can front the estimated gas fee at the time of transaction so that the sender has ETH to move the ERC-20.
 
