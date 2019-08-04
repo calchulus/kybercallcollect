@@ -1,6 +1,8 @@
 
 # KyberCallCollect
 
+[Demo[(https://calchulus.github.io/kybercallcollect/)
+
 The goal of the KyberCallCollect is to allow individuals who have no ETH to send any transactions, but may have an ERC-20 that is airdropped to them, can transact out using a “Call Collect” logic, so that the recipient can front the estimated gas fee at the time of transaction so that the sender has ETH to move the ERC-20.
 
 In this dApp, we allow a user to create a new wallet using Torus by providing simply an email. From here, we pass over the address over to the Kyber Widget call, and pull average gas fees at the time of load (from ETH Gas Station), as well as the live ETH/DAI exchange rate from the Kyber Trading API, and then calculate the estimated gas necessary.
